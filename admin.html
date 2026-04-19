@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>All Feedbacks</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody id="tableData"></tbody>
+        </table>
+    </div>
+
+    <button onclick="downloadExcel()">Download Excel</button>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyDwkBHhuxOpm6mWD4Jkoicd27zYJu84ERQ",
+  authDomain: "jksn-4b554.firebaseapp.com",
+  databaseURL: "https://jksn-4b554-default-rtdb.firebaseio.com",
+  projectId: "jksn-4b554",
+};
+
+firebase.initializeApp(firebaseConfig);
+var db = firebase.database();
+</script>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
